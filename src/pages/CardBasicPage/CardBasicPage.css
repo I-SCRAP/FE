@@ -6,16 +6,16 @@
 }
 
 .popup-search{
-    margin-top: 115px;
-    width: 884px; 
-    height: 72px; 
+    margin-top: 70px;
+    width: 800px; 
+    height: 47px;
     border-radius: 50px; 
     border: 3px #4AC7CF solid
 }
 
 .popup-detail-container{
     display: flex;
-    margin-top: 82px;
+    margin-top: 60px;
 }
 
 .popup-post-container{
@@ -25,32 +25,36 @@
 }
 
 .popup-post{
-    width: 209px; 
-    height: 295px; 
+    width: 160px; 
+    height: 230px; 
     background: #D9D9D9; 
     border-radius: 15px;
 }
 
 .popup-name {
-    margin-top: 19px;
+    margin-top: 17px;
     text-align: center;
 }
 
 .popup-detail-title {
     color: black;
-    font-size: 18px;
+    font-size: 15px;
     font-family: Noto Sans KR; 
-    font-weight: 400; 
-    line-height: 20px; 
+    font-weight: 600; 
+    line-height: 20px;
     word-wrap: break-word;
     
 
 }
 
+.popup-detail{
+    margin-top: -20px;
+}
+
 .details-container {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
     width: 350px;
     justify-content: space-between;
    
@@ -63,13 +67,13 @@
 }
 
 .button-container {
-    margin-top: 92px;
-    margin-bottom: 120px;
+    margin-top: 62px;
+    margin-bottom: 0px;
 }
 
 .save-button {
-    width: 273px; 
-    height: 72px; 
+    width: 250px; 
+    height: 60px; 
     background: #EEEEEE; 
     border: none;
     border-radius: 15px;
@@ -77,8 +81,8 @@
 }
 
 .custom-button {
-    width: 273px; 
-    height: 72px; 
+    width: 250px; 
+    height: 60px; 
     border: none;
     border-radius: 15px;
     background: #FEDC74;

@@ -1,0 +1,228 @@
+.card-making-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: scale(0.75);
+
+
+}
+
+.making-button-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.making-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: 94px;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    margin-top: 16px;
+}
+
+.making-button-img {
+    width: 45%;
+    height: 45%;
+    margin-top: 5px;
+    object-fit: cover;
+
+}
+
+.making-button-text {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999999;
+    /* 텍스트 색상 */
+    text-align: center;
+}
+
+.saving-button-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 108px;
+}
+
+
+
+.moving-button {
+    background-color: #BBBBBB;
+    border: none;
+    border-radius: 15px;
+    padding: 14px;
+    font-size: 17px;
+    color: white;
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    line-height: 15px;
+    word-wrap: break-word;
+}
+
+.card-save-button {
+    margin-top: 16px;
+    background-color: #FEDC74;
+    border: none;
+    border-radius: 15px;
+    padding: 14px;
+    font-size: 17px;
+    color: #B4643A;
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    line-height: 15px;
+    word-wrap: break-word;
+
+}
+
+.making-card-text {
+    display: flex;
+    align-items: center;
+    color: #171717;
+    font-size: 30px;
+    font-family: Noto Sans KR;
+    font-weight: 600;
+    line-height: 20px;
+    word-wrap: break-word;
+    margin-left: 45px;
+}
+
+.making-card-option {
+    margin-left: 20px;
+    color: #171717;
+    font-size: 19px;
+    font-family: Noto Sans KR;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 20px;
+    word-wrap: break-word
+}
+
+.making-card-view {
+    display: flex;
+    flex-direction: row;
+}
+
+.maked-card {
+    background-color: #BBBBBB;
+    width: 292px;
+    height: 500.29px;
+    margin-top: 53px;
+    border-radius: 15px;
+}
+
+.add-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 653px;
+    height: 57px;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    
+}
+
+.rayout-font {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+
+.rayout {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    width: 60%;
+    height: 266px;
+
+}
+
+.font {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    width: 40%;
+    height: 266px;
+
+}
+
+.image-sticker-background {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+
+.custom-options {
+    margin-top: 25px;
+    margin-left: 92px;
+}
+
+.image {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    width: 20%;
+    height: 266px;
+
+}
+
+.sticker {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    width: 60%;
+    height: 266px;
+
+}
+
+.background {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    width: 20%;
+    height: 266px;
+
+}
+
+.open-or-not {
+    margin-left: 45px;
+    margin-top: -20px;
+    padding: 5px;
+    width: 120px;
+    height: 24.44px;
+    border-radius: 22.22px;
+    border: 1px rgba(0, 0, 0, 0.50) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.open-button {
+    width: 50%;
+    height: 25px;
+    border: none;
+    background: #4AC7CF;
+    border-radius: 14.81px
+}
+
+.adjust-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 5px;
+    margin-left: 70px;
+    margin-right: 10px;
+    gap: 20px;
+
+}
+
+.add-text-button {
+    width: 120px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    background: #BBBBBB;
+    border: none;
+    border-radius: 15px
+}
