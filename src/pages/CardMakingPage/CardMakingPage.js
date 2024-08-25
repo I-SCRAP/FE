@@ -1,78 +1,81 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './CardMakingPage.css';
 import Nav from '../../components/Nav/Nav';
-import CardFront from '../../assets/cardfront.svg';
-import CardBack from '../../assets/cardback.svg';
-import CardWriting from '../../assets/cardwriting.svg';
-import Reset from '../../assets/goback.svg';
-import GoForward from '../../assets/goforward.svg';
-import GoBack from '../../assets/reset.svg';
-
+import CardFront from '../../assets/CardMakingButtons/cardfront.svg';
+import CardFront_Click from '../../assets/CardMakingButtons/cardfront_click.svg';
+import CardBack from '../../assets/CardMakingButtons/cardback.svg';
+import CardBack_Click from '../../assets/CardMakingButtons/cardback_click.svg';
+import CardWriting from '../../assets/CardMakingButtons/cardwriting.svg';
+import CardWriting_Click from '../../assets/CardMakingButtons/cardwriting_click.svg';
+import MakingButton from '../../components/MakingButton/MakingButton'; // 새로운 버튼 컴포넌트
+import CardFrontContent from '../../components/CardFrontContent/CardFrontContent'; // 카드 앞면 컴포넌트
+import CardBackContent from '../../components/CardBackContent/CardBackContent'; // 카드 뒷면 컴포넌트
+import CardWritingContent from '../../components/CardWritingContent/CardWritingContent';
+import PopupModal from '../../components/PopupModal/PopupModa';
 
 export default function CardMakingPage() {
+  const [activeButton, setActiveButton] = useState('card-front');
+  const [open, setOpen] = useState('open');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <>
       <Nav />
       <div className='card-making-container'>
-
         <div>
+          <div className='open-or-not'>
+            <button
+              className={`open-button ${open === 'open' ? 'active' : ''}`}
+              onClick={() => setOpen('open')}
+            >
+              공개
+            </button>
+            <button
+              className={`open-button ${open === 'not-open' ? 'active' : ''}`}
+              onClick={() => setOpen('not-open')}
+            >
+              비공개
+            </button>
+          </div>
           <div className='making-button-container'>
-
-            <div className='making-button'>
-              <img className='making-button-img' src={CardBack} />
-              <div className='making-button-text'>카드제작</div>
-            </div>
-            <div className='making-button'>
-              <img className='making-button-img' src={CardWriting} />
-              <div className='making-button-text'>뒷면제작</div>
-            </div>
-            <div className='making-button'>
-              <img className='making-button-img' src={CardFront} />
-              <div className='making-button-text'>기록쓰기</div>
-            </div>
+            <MakingButton
+              isActive={activeButton === 'card-front'}
+              onClick={() => setActiveButton('card-front')}
+              imgSrc={CardFront}
+              activeImgSrc={CardFront_Click}
+              text="카드제작"
+            />
+            <MakingButton
+              isActive={activeButton === 'card-back'}
+              onClick={() => setActiveButton('card-back')}
+              imgSrc={CardBack}
+              activeImgSrc={CardBack_Click}
+              text="뒷면제작"
+            />
+            <MakingButton
+              isActive={activeButton === 'card-writing'}
+              onClick={() => setActiveButton('card-writing')}
+              imgSrc={CardWriting}
+              activeImgSrc={CardWriting_Click}
+              text="기록쓰기"
+            />
           </div>
           <div className='saving-button-container'>
-            <button className='moving-button'>보관함</button>
+            <button className='moving-button' onClick={openModal}>보관함</button>
             <button className='card-save-button'>저장</button>
           </div>
         </div>
 
-        <div className='card-container'>
-          <div className='open-or-not'>
-            <button className='open-button'>공개</button>
-            <button className='open-button'>비공개</button>
-          </div>
-          <div className='making-card-text'>
-            <p>팝업카드 만들기  </p>
-            <p className='making-card-option'>FRONT</p>
-          </div>
-          <div className='making-card-view'>
-            <div className='adjust-buttons'>
-              <img src={GoBack}/>
-              <img src={GoForward}/>
-              <img src={Reset}/>
-            </div>
-            <div className='maked-card'>만드는 카드 그림</div>
-          </div>
-        </div>
-
-        <div className='custom-options'>
-          <div className='add-text'>
-            <div>텍스트</div>
-            <button className='add-text-button'>추가하기</button>
-          </div>
-          <div className='rayout-font'>
-            <div className='rayout'>레이아웃</div>
-            <div className='font'>폰트</div>
-          </div>
-          <div className='image-sticker-background'>
-            <div className='image'>사진선택</div>
-            <div className='sticker'>스티커</div>
-            <div className='background'>배경색</div>
-          </div>
-        </div>
-      </div >
+        {/* 조건부 렌더링 */}
+        {activeButton === 'card-front' && <CardFrontContent />}
+        {activeButton === 'card-back' && <CardBackContent />}
+        {activeButton === 'card-writing' && <CardWritingContent />}
+      </div>
+      <PopupModal isOpen={isModalOpen} onClose={closeModal} />
     </>
 
-  )
+  );
 }
